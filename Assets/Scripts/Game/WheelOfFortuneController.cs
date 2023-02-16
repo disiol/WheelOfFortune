@@ -36,31 +36,7 @@ namespace Game
             }
         }
 
-        public void SpinWheel()
-        {
-            if (IsWheelSpinning())
-            {
-                return;
-            }
-
-
-            // select random value for current spin
-            int selectedValue = values[Random.Range(0, 16)];
-
-            _currentScore += selectedValue;
-
-            // TODO update score text  wen stop animation
-            UpdateScoreText();
-
-            // save score
-            ScoreManager.SaveScore(_currentScore);
-
-            //TODO start wheel spin animation
-            // колесо крутится пысля зу пинення поя вляеться в ыкны потрыбна сума ы додаеться
-            //TODO start wheel spin saund
-            // ...
-        }
-
+     
         public  void GeneraterandomValues()
         {
             // generate random values for wheel segments
@@ -78,10 +54,6 @@ namespace Game
             }
         }
 
-        private bool IsWheelSpinning()
-        {
-            // check if wheel is currently spinning
-            return false;
-        }
+     
     }
 }
