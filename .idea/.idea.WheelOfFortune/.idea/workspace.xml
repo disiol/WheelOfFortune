@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57bb49e3-cd30-47d2-bc97-454b4fae2fa5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/GetCurrentSegmentName.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/GetCurrentSegmentName.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Segment.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Segment.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/WheelOfFortuneGenerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/WheelOfFortuneGenerator.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/SpinCenterButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/SpinCenterButton.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortune.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortune.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelSegment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelSegment.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortune2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortune2.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,10 +75,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="27854">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="27854" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -101,7 +97,7 @@
       <workItem from="1676428481824" duration="1009000" />
       <workItem from="1676459461315" duration="2259000" />
       <workItem from="1676497975107" duration="9255000" />
-      <workItem from="1676572684754" duration="6188000" />
+      <workItem from="1676572684754" duration="8500000" />
     </task>
     <servers />
   </component>
@@ -112,5 +108,37 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs</url>
+          <line>73</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" initialLine="73" containingFunctionPresentation="method 'SpinCoroutine'">
+            <startOffsets>
+              <option value="1993" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2094" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs</url>
+          <line>77</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" initialLine="75" containingFunctionPresentation="method 'SpinCoroutine'">
+            <startOffsets>
+              <option value="2180" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2281" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

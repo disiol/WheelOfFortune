@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: cointsSound
       value: 
       objectReference: {fileID: 84526988}
+    - target: {fileID: 648441498451173970, guid: 74efdb1b70dd180eebe7ded33e066d68, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1174975223}
     - target: {fileID: 2685641121720223822, guid: 74efdb1b70dd180eebe7ded33e066d68, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

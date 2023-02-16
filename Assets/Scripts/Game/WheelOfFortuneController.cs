@@ -14,14 +14,14 @@ namespace Game
 
         private void Start()
         {
-            _currentScore = ScoreManager.LoadScore();
             UpdateScoreText();
             values = new List<int>();
-            
         }
 
-        private void UpdateScoreText()
+        public void UpdateScoreText()
         {
+            _currentScore = ScoreManager.LoadScore();
+
             if (_currentScore >= 1000000)
             {
                 scoreText.text = (_currentScore / 1000000.0f).ToString("f2") + "m";
@@ -36,8 +36,8 @@ namespace Game
             }
         }
 
-     
-        public  void GeneraterandomValues()
+
+        public void GeneraterandomValues()
         {
             // generate random values for wheel segments
 
@@ -53,7 +53,5 @@ namespace Game
                 values.Add(newValue);
             }
         }
-
-     
     }
 }
