@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57bb49e3-cd30-47d2-bc97-454b4fae2fa5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelSegment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelSegment.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Segment.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Segment.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/WheelOfFortuneGenerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/WheelOfFortuneGenerator.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortune.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortune.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortune.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortune.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelSegment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelSegment.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +101,7 @@
       <workItem from="1676428481824" duration="1009000" />
       <workItem from="1676459461315" duration="2259000" />
       <workItem from="1676497975107" duration="9255000" />
-      <workItem from="1676572684754" duration="2196000" />
+      <workItem from="1676572684754" duration="6188000" />
     </task>
     <servers />
   </component>

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class WheelOfFortune : MonoBehaviour
+    public class WheelOfFortuneController : MonoBehaviour
     {
         public TextMeshProUGUI scoreText;
 

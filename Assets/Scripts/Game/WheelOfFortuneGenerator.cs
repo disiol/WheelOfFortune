@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Game.Segment;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -10,18 +11,16 @@ namespace Game
     public class WheelOfFortuneGenerator : MonoBehaviour
     {
         [SerializeField] private GameObject segmentPrefab;
-        [SerializeField] private Button spinButton;
         [SerializeField] private int numberOfSegments = 16;
         [SerializeField] private float radius = 0.5f;
-        [SerializeField] private float spinTime = 5f;
+        
 
         private List<GameObject> segments = new();
-        private WheelOfFortune _wheelOfFortune;
-        private bool _isSpinning = false;
+        private WheelOfFortuneController _wheelOfFortuneController;
 
         private void Awake()
         {
-            _wheelOfFortune = gameObject.GetComponent<WheelOfFortune>();
+            _wheelOfFortuneController = gameObject.GetComponent<WheelOfFortuneController>();
             GenerateSegments();
         }
 
@@ -39,13 +38,13 @@ namespace Game
                 Vector3 position = new Vector3(x, y, center.z);
                 Quaternion rotation = Quaternion.Euler(0, 0, -angle);
                 GameObject segment = Instantiate(segmentPrefab, position, rotation, transform);
-
+                segment.name = i.ToString();
+                
                 segments.Add(segment);
             }
 
-            _wheelOfFortune.GeneraterandomValues();
-            SetSegmentValues(_wheelOfFortune.values);
-            spinButton.onClick.AddListener(Spin);
+            _wheelOfFortuneController.GeneraterandomValues();
+            SetSegmentValues(_wheelOfFortuneController.values);
         }
 
         public void SetSegmentValues(List<int> segmentValues)
@@ -56,39 +55,6 @@ namespace Game
             }
         }
 
-        public void Spin()
-        {
-            if (!_isSpinning)
-            {
-                _isSpinning = true;
-                float targetAngle = Random.Range(0f, 360f);
-                StartCoroutine(SpinCoroutine(targetAngle));
-            }
-        }
-
-        private IEnumerator SpinCoroutine(float targetAngle)
-        {
-            float angle = 0f;
-            float speed = 1000f;
-            float time = 0f;
-
-            while (time < spinTime)
-            {
-                float delta = Time.deltaTime;
-                angle += speed * delta;
-                time += delta;
-
-                transform.Rotate(new Vector3(0, 0, angle));
-
-                if (angle >= targetAngle)
-                {
-                    speed = Mathf.Lerp(speed, 0, time / spinTime);
-                }
-
-                yield return null;
-            }
-
-            _isSpinning = false;
-        }
+      
     }
 }
