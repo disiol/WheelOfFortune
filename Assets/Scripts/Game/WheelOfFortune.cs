@@ -9,27 +9,30 @@ namespace Game
     {
         public TextMeshProUGUI scoreText;
 
-        private int currentScore;
+        private int _currentScore;
+        public List<int> values = new List<int>();
 
         private void Start()
         {
-            currentScore = ScoreManager.LoadScore();
+            _currentScore = ScoreManager.LoadScore();
             UpdateScoreText();
+            values = new List<int>();
+            
         }
 
         private void UpdateScoreText()
         {
-            if (currentScore >= 1000000)
+            if (_currentScore >= 1000000)
             {
-                scoreText.text = (currentScore / 1000000.0f).ToString("f2") + "m";
+                scoreText.text = (_currentScore / 1000000.0f).ToString("f2") + "m";
             }
-            else if (currentScore >= 1000)
+            else if (_currentScore >= 1000)
             {
-                scoreText.text = (currentScore / 1000.0f).ToString("f2") + "k";
+                scoreText.text = (_currentScore / 1000.0f).ToString("f2") + "k";
             }
             else
             {
-                scoreText.text = currentScore.ToString();
+                scoreText.text = _currentScore.ToString();
             }
         }
 
@@ -40,31 +43,39 @@ namespace Game
                 return;
             }
 
+
+            // select random value for current spin
+            int selectedValue = values[Random.Range(0, 16)];
+
+            _currentScore += selectedValue;
+
+            // TODO update score text  wen stop animation
+            UpdateScoreText();
+
+            // save score
+            ScoreManager.SaveScore(_currentScore);
+
+            //TODO start wheel spin animation
+            // колесо крутится пысля зу пинення поя вляеться в ыкны потрыбна сума ы додаеться
+            //TODO start wheel spin saund
+            // ...
+        }
+
+        public  void GeneraterandomValues()
+        {
             // generate random values for wheel segments
-            List<int> values = new List<int>();
+
             for (int i = 0; i < 16; i++)
             {
                 int newValue;
+
                 do
                 {
-                    newValue = UnityEngine.Random.Range(1000, 100000);
+                    newValue = Random.Range(1000, 100000);
                 } while (values.Contains(newValue) || newValue % 1000 != 0);
 
                 values.Add(newValue);
             }
-
-            // select random value for current spin
-            int selectedValue = values[UnityEngine.Random.Range(0, 16)];
-            currentScore += selectedValue;
-
-            // update score text
-            UpdateScoreText();
-
-            // save score
-            ScoreManager.SaveScore(currentScore);
-
-            // start wheel spin animation
-            // ...
         }
 
         private bool IsWheelSpinning()
@@ -73,5 +84,4 @@ namespace Game
             return false;
         }
     }
-
 }
