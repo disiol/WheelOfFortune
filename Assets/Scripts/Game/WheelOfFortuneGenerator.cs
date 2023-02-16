@@ -44,6 +44,7 @@ namespace Game
             }
 
             _wheelOfFortuneController.GeneraterandomValues();
+            
             SetSegmentValues(_wheelOfFortuneController.values);
         }
 
