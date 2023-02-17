@@ -11,10 +11,10 @@ namespace Game
     {
         public TextMeshProUGUI scoreText;
 
-        private int _currentScore;
+        private ulong _currentScore;
         public List<int> values = new List<int>();
         private string _segmentName;
-        private int _wheelSegmentCoinAmount;
+        private ulong _wheelSegmentCoinAmount;
 
         [HideInInspector] public int quantityVales;
 
@@ -32,7 +32,7 @@ namespace Game
             SetScoreText(_currentScore);
         }
 
-        private void SetScoreText(int currentScore)
+        private void SetScoreText(ulong currentScore)
         {
             if (currentScore >= 1000000)
             {

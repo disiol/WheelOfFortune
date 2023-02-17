@@ -18,7 +18,7 @@ namespace Game
 
 
         private bool _isSpinning = false;
-        private int _currentScore;
+        private ulong _currentScore;
         private int _segmentName;
         private int _wheelSegmentWinCoinAmount;
         private GameObject _gameSegments;
@@ -106,7 +106,7 @@ namespace Game
            
             Debug.Log("Spin _wheelSegmentWinCoinAmount " + _wheelSegmentWinCoinAmount);
 
-            int wheelSegmentCoinAmount = _currentScore + _wheelSegmentWinCoinAmount;
+            ulong wheelSegmentCoinAmount = _currentScore + (ulong)_wheelSegmentWinCoinAmount;
             ScoreManager.SaveScore(wheelSegmentCoinAmount);
 
 
