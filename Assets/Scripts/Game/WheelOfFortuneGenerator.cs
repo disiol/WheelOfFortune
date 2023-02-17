@@ -13,19 +13,21 @@ namespace Game
         [SerializeField] private GameObject segmentPrefab;
         [SerializeField] private int numberOfSegments = 16;
         [SerializeField] private float radius = 0.5f;
-        
 
-        private List<GameObject> segments = new();
+
+        public List<GameObject> segments = new();
         private WheelOfFortuneController _wheelOfFortuneController;
+        private Transform _transform;
 
         private void Awake()
         {
             _wheelOfFortuneController = gameObject.GetComponent<WheelOfFortuneController>();
+            _transform = GameObject.Find("Segments").transform;
             GenerateSegments();
         }
 
 
-        private void GenerateSegments()
+        public void GenerateSegments()
         {
             float angleStep = 360f / numberOfSegments;
 
@@ -37,7 +39,7 @@ namespace Game
                 float y = center.y + Mathf.Cos(angle * Mathf.Deg2Rad) * radius;
                 Vector3 position = new Vector3(x, y, center.z);
                 Quaternion rotation = Quaternion.Euler(0, 0, -angle);
-                GameObject segment = Instantiate(segmentPrefab, position, rotation, transform);
+                GameObject segment = Instantiate(segmentPrefab, position, rotation, _transform);
                 segment.name = i.ToString();
                 
                 segments.Add(segment);

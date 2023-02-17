@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Game.Segment;
 using Safe;
 using TMPro;
 using UnityEngine;
@@ -11,10 +12,11 @@ namespace Game
 
         private int _currentScore;
         public List<int> values = new List<int>();
+        private string _segmentName;
+        private int _wheelSegmentCoinAmount;
 
         private void Start()
         {
-            UpdateScoreText();
             values = new List<int>();
         }
 
@@ -22,17 +24,22 @@ namespace Game
         {
             _currentScore = ScoreManager.LoadScore();
 
-            if (_currentScore >= 1000000)
+            SetScoreText(_currentScore);
+        }
+
+        private void SetScoreText(int currentScore)
+        {
+            if (currentScore >= 1000000)
             {
-                scoreText.text = (_currentScore / 1000000.0f).ToString("f2") + "m";
+                scoreText.text = (currentScore / 1000000.0f).ToString("f2") + "m";
             }
-            else if (_currentScore >= 1000)
+            else if (currentScore >= 1000)
             {
-                scoreText.text = (_currentScore / 1000.0f).ToString("f2") + "k";
+                scoreText.text = (currentScore / 1000.0f).ToString("f2") + "k";
             }
             else
             {
-                scoreText.text = _currentScore.ToString();
+                scoreText.text = currentScore.ToString();
             }
         }
 
@@ -53,5 +60,7 @@ namespace Game
                 values.Add(newValue);
             }
         }
+        
+       
     }
 }

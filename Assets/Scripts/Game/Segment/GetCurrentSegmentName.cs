@@ -8,9 +8,13 @@ namespace Game.Segment
     {
         public string segmentName;
 
+   
         private void OnTriggerEnter2D(Collider2D col)
         {
+
             segmentName = col.name;
+            Debug.Log("GetCurrentSegmentName segmentName " + segmentName);
+
         }
     }
 }

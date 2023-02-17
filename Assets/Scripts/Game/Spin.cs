@@ -21,10 +21,15 @@ namespace Game
         private int _currentScore;
         private string _segmentName;
         private int _wheelSegmentCoinAmount;
+        private GameObject _gameSegments;
+        [SerializeField] private float decelerationSpeed; // The rate at which the wheel decelerates
 
         void Start()
         {
             _wheelOfFortuneController = gameObject.GetComponent<WheelOfFortuneController>();
+
+            _gameSegments = GameObject.Find("Segments");
+
 
             spinButton.onClick.AddListener(StartSpin);
         }
@@ -34,12 +39,12 @@ namespace Game
             if (!_isSpinning)
             {
                 _isSpinning = true;
-                float targetAngle = Random.Range(0f, 360f);
-                StartCoroutine(SpinCoroutine(targetAngle));
             }
 
             if (_isSpinning)
             {
+                float targetAngle = Random.Range(0f, 360f);
+                StartCoroutine(SpinCoroutine(targetAngle));
                 cointsSound.SetActive(false);
                 spinSound.SetActive(true);
             }
@@ -50,33 +55,47 @@ namespace Game
             float angle = 0f;
             float speed = 1000f;
             float time = 0f;
+            float delta;
 
-            while (time < spinTime)
+            
+
+            while (speed > spinTime)
             {
-                float delta = Time.deltaTime;
+                delta = Time.deltaTime;
                 angle += speed * delta;
                 time += delta;
 
-                transform.Rotate(new Vector3(0, 0, angle));
+                _gameSegments.transform.Rotate(new Vector3(0, 0, angle));
 
                 if (angle >= targetAngle)
                 {
-                    speed = Mathf.Lerp(speed, 0, time / spinTime);
+                    speed = Mathf.Lerp(speed, 0, time / spinTime); // Decelerate the wheel smoothly
+                    speed -= decelerationSpeed * delta;
                 }
 
                 yield return null;
             }
-
             _isSpinning = false;
             spinSound.SetActive(false);
 
+
+            if (!_isSpinning)
+            {
+                cointsSound.SetActive(true);
+                GetCurrentSuresPlasAndSaveSurses();
+            }
+        }
+
+
+        public void GetCurrentSuresPlasAndSaveSurses()
+        {
             _currentScore = ScoreManager.LoadScore();
             _segmentName = GameObject.Find("SpinCenterButton").GetComponent<GetCurrentSegmentName>().segmentName;
-            
-            Debug.Log("Spin _segmentName" + _segmentName);
+
+            Debug.Log("Spin _segmentName " + _segmentName);
 
             _wheelSegmentCoinAmount = GameObject.Find(_segmentName).GetComponent<WheelSegment>().GetCoinAmount();
-            
+
             Debug.Log("Spin _wheelSegmentCoinAmount " + _wheelSegmentCoinAmount);
 
 
@@ -84,7 +103,6 @@ namespace Game
 
             ScoreManager.SaveScore(wheelSegmentCoinAmount);
             _wheelOfFortuneController.UpdateScoreText();
-            cointsSound.SetActive(true);
         }
     }
 }
