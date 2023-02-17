@@ -12,7 +12,7 @@ namespace Game
         public TextMeshProUGUI scoreText;
 
         private ulong _currentScore;
-        public List<int> values = new List<int>();
+        public List<ulong> values;
         private string _segmentName;
         private ulong _wheelSegmentCoinAmount;
 
@@ -20,7 +20,7 @@ namespace Game
 
         private void Start()
         {
-            values = new List<int>();
+            values = new List<ulong>();
 
             UpdateScoreText();
         }
@@ -57,11 +57,11 @@ namespace Game
 
             for (int i = 0; i < quantityVales; i++)
             {
-                int newValue;
+                ulong newValue;
 
                 do
                 {
-                    newValue = Random.Range(1000, 100000);
+                    newValue = (ulong)Random.Range(1000, 100000);
                 } while (values.Contains(newValue) || newValue % 1000 != 0);
 
                 values.Add(newValue);

@@ -20,10 +20,10 @@ namespace Game
         private bool _isSpinning = false;
         private ulong _currentScore;
         private int _segmentName;
-        private int _wheelSegmentWinCoinAmount;
+        private ulong _wheelSegmentWinCoinAmount;
         private GameObject _gameSegments;
         [SerializeField] private float decelerationSpeed; // The rate at which the wheel decelerates
-        private int _wheelZeroSegmentCoinAmount;
+        private ulong _wheelZeroSegmentCoinAmount;
         private WheelSegment _getwheelSegmentWin;
         private WheelSegment _getWheelZeroSegment;
         private int _quantityVales;
@@ -33,7 +33,6 @@ namespace Game
             _wheelOfFortuneController = gameObject.GetComponent<WheelOfFortuneController>();
 
             _gameSegments = GameObject.Find("Segments");
-            _currentScore = ScoreManager.LoadScore();
             spinButton.onClick.AddListener(StartSpin);
             _quantityVales = _wheelOfFortuneController.quantityVales;
         }
@@ -106,7 +105,9 @@ namespace Game
            
             Debug.Log("Spin _wheelSegmentWinCoinAmount " + _wheelSegmentWinCoinAmount);
 
-            ulong wheelSegmentCoinAmount = _currentScore + (ulong)_wheelSegmentWinCoinAmount;
+            _currentScore = ScoreManager.LoadScore();
+
+            ulong wheelSegmentCoinAmount = _currentScore + _wheelSegmentWinCoinAmount;
             ScoreManager.SaveScore(wheelSegmentCoinAmount);
 
 

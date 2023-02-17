@@ -50,7 +50,7 @@ namespace Game
             SetSegmentValues(_wheelOfFortuneController.values);
         }
 
-        public void SetSegmentValues(List<int> segmentValues)
+        public void SetSegmentValues(List<ulong> segmentValues)
         {
             for (int i = 0; i < numberOfSegments; i++)
             {

@@ -6,7 +6,7 @@ namespace Game.Segment
 {
     public class WheelSegment : MonoBehaviour
     {
-        private int _coinAmount;
+        private ulong _coinAmount;
 
         private TextMeshProUGUI _coinAmountText;
 
@@ -15,7 +15,7 @@ namespace Game.Segment
             _coinAmountText = GetComponentInChildren<TextMeshProUGUI>();
         }
 
-        public void SetCoinAmount(int amount)
+        public void SetCoinAmount(ulong amount)
         {
             transform.GetComponent<Image>().color = GetRandomColor();
 
@@ -23,7 +23,7 @@ namespace Game.Segment
             _coinAmountText.text = amount.ToString();
         }
 
-       public int GetCoinAmount()
+       public ulong GetCoinAmount()
         {
             return _coinAmount;
         }

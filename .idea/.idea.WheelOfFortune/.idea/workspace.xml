@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="57bb49e3-cd30-47d2-bc97-454b4fae2fa5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Safe/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Safe/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +94,7 @@
       <workItem from="1676459461315" duration="2259000" />
       <workItem from="1676497975107" duration="9255000" />
       <workItem from="1676572684754" duration="15404000" />
-      <workItem from="1676622792490" duration="15451000" />
+      <workItem from="1676622792490" duration="16015000" />
     </task>
     <servers />
   </component>
