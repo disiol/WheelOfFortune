@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 269214566}
     m_Modifications:
     - target: {fileID: 660446721, guid: 74efdb1b70dd180eebe7ded33e066d68, type: 3}
+      propertyPath: spinTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 660446721, guid: 74efdb1b70dd180eebe7ded33e066d68, type: 3}
       propertyPath: spinSound
       value: 
       objectReference: {fileID: 1493942196}
@@ -142,6 +146,10 @@ PrefabInstance:
       propertyPath: cointsSound
       value: 
       objectReference: {fileID: 84526988}
+    - target: {fileID: 660446721, guid: 74efdb1b70dd180eebe7ded33e066d68, type: 3}
+      propertyPath: decelerationSpeed
+      value: 3000
+      objectReference: {fileID: 0}
     - target: {fileID: 1697085985, guid: 74efdb1b70dd180eebe7ded33e066d68, type: 3}
       propertyPath: m_Enabled
       value: 0

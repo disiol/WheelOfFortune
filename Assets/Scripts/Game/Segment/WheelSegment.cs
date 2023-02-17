@@ -33,7 +33,7 @@ namespace Game.Segment
         {
             float red = Random.Range(0.5f, 1f);
             float green = Random.Range(0, 0.5f);
-            float blue = 0;
+            float blue = Random.Range(0, 0.5f);
 
             return new Color(red, green, blue);
         }

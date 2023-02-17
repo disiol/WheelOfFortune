@@ -3,6 +3,7 @@ using Game.Segment;
 using Safe;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game
 {
@@ -15,9 +16,13 @@ namespace Game
         private string _segmentName;
         private int _wheelSegmentCoinAmount;
 
+        [HideInInspector] public int quantityVales;
+
         private void Start()
         {
             values = new List<int>();
+
+            UpdateScoreText();
         }
 
         public void UpdateScoreText()
@@ -46,9 +51,11 @@ namespace Game
 
         public void GeneraterandomValues()
         {
+            quantityVales = 16;
+
             // generate random values for wheel segments
 
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < quantityVales; i++)
             {
                 int newValue;
 
@@ -60,7 +67,5 @@ namespace Game
                 values.Add(newValue);
             }
         }
-        
-       
     }
 }

@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="57bb49e3-cd30-47d2-bc97-454b4fae2fa5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/Segment.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/Segment.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/SpinCenterButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/SpinCenterButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Perfabs/WheelOfFortuneGenerator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Perfabs/WheelOfFortuneGenerator.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Start.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Start.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/GetCurrentSegmentName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/GetCurrentSegmentName.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/GetCurrentSegmentName.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/GetCurrentSegmentName.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/641e30bacc0444688e6c5f619fdd19b4158400/e6/5ce0043d/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/641e30bacc0444688e6c5f619fdd19b4158400/ef/c7abf84e/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
@@ -98,7 +96,7 @@
       <workItem from="1676459461315" duration="2259000" />
       <workItem from="1676497975107" duration="9255000" />
       <workItem from="1676572684754" duration="15404000" />
-      <workItem from="1676622792490" duration="10577000" />
+      <workItem from="1676622792490" duration="14411000" />
     </task>
     <servers />
   </component>

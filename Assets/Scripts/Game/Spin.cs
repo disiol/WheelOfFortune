@@ -19,19 +19,23 @@ namespace Game
 
         private bool _isSpinning = false;
         private int _currentScore;
-        private string _segmentName;
-        private int _wheelSegmentCoinAmount;
+        private int _segmentName;
+        private int _wheelSegmentWinCoinAmount;
         private GameObject _gameSegments;
         [SerializeField] private float decelerationSpeed; // The rate at which the wheel decelerates
+        private int _wheelZeroSegmentCoinAmount;
+        private WheelSegment _getwheelSegmentWin;
+        private WheelSegment _getWheelZeroSegment;
+        private int _quantityVales;
 
         void Start()
         {
             _wheelOfFortuneController = gameObject.GetComponent<WheelOfFortuneController>();
 
             _gameSegments = GameObject.Find("Segments");
-
-
+            _currentScore = ScoreManager.LoadScore();
             spinButton.onClick.AddListener(StartSpin);
+            _quantityVales = _wheelOfFortuneController.quantityVales;
         }
 
         private void StartSpin()
@@ -57,7 +61,6 @@ namespace Game
             float time = 0f;
             float delta;
 
-            
 
             while (speed > spinTime)
             {
@@ -75,6 +78,11 @@ namespace Game
 
                 yield return null;
             }
+
+            //TODO  генерація вій граша поменять значение вій грашной клетки с нулевой ицвета если она не нулевая
+
+            _gameSegments.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+
             _isSpinning = false;
             spinSound.SetActive(false);
 
@@ -89,20 +97,34 @@ namespace Game
 
         public void GetCurrentSuresPlasAndSaveSurses()
         {
-            _currentScore = ScoreManager.LoadScore();
-            _segmentName = GameObject.Find("SpinCenterButton").GetComponent<GetCurrentSegmentName>().segmentName;
+            _segmentName = Random.Range(0, _quantityVales);
 
             Debug.Log("Spin _segmentName " + _segmentName);
 
-            _wheelSegmentCoinAmount = GameObject.Find(_segmentName).GetComponent<WheelSegment>().GetCoinAmount();
+            _getwheelSegmentWin = GameObject.Find(_segmentName.ToString()).GetComponent<WheelSegment>();
+            _wheelSegmentWinCoinAmount = _getwheelSegmentWin.GetCoinAmount();
+           
+            Debug.Log("Spin _wheelSegmentWinCoinAmount " + _wheelSegmentWinCoinAmount);
 
-            Debug.Log("Spin _wheelSegmentCoinAmount " + _wheelSegmentCoinAmount);
-
-
-            int wheelSegmentCoinAmount = _currentScore + _wheelSegmentCoinAmount;
-
+            int wheelSegmentCoinAmount = _currentScore + _wheelSegmentWinCoinAmount;
             ScoreManager.SaveScore(wheelSegmentCoinAmount);
+
+
+            SetVineNaberstoZenterSegment();
+
+
             _wheelOfFortuneController.UpdateScoreText();
+        }
+
+        private void SetVineNaberstoZenterSegment()
+        {
+            _getWheelZeroSegment = GameObject.Find(0.ToString()).GetComponent<WheelSegment>();
+            _wheelZeroSegmentCoinAmount = _getWheelZeroSegment.GetCoinAmount();
+            Debug.Log("Spin _wheelZeroSegmentCoinAmount " + _wheelZeroSegmentCoinAmount);
+
+
+            _getWheelZeroSegment.SetCoinAmount(_wheelSegmentWinCoinAmount);
+            _getwheelSegmentWin.SetCoinAmount(_wheelZeroSegmentCoinAmount);
         }
     }
 }
