@@ -46,6 +46,7 @@ namespace Game
 
             if (_isSpinning)
             {
+                spinButton.enabled = false;
                 float targetAngle = Random.Range(0f, 360f);
                 StartCoroutine(SpinCoroutine(targetAngle));
                 cointsSound.SetActive(false);
@@ -90,6 +91,8 @@ namespace Game
             {
                 cointsSound.SetActive(true);
                 GetCurrentSuresPlasAndSaveSurses();
+                spinButton.enabled = true;
+
             }
         }
 

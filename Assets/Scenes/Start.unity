@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 660446721, guid: 74efdb1b70dd180eebe7ded33e066d68, type: 3}
       propertyPath: spinTime
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 660446721, guid: 74efdb1b70dd180eebe7ded33e066d68, type: 3}
       propertyPath: spinSound

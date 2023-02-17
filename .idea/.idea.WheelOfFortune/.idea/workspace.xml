@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="57bb49e3-cd30-47d2-bc97-454b4fae2fa5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WheelOfFortune/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Segment/WheelSegment.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Spin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WheelOfFortuneGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,10 +69,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="66756">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="66756" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -94,7 +92,7 @@
       <workItem from="1676459461315" duration="2259000" />
       <workItem from="1676497975107" duration="9255000" />
       <workItem from="1676572684754" duration="15404000" />
-      <workItem from="1676622792490" duration="16015000" />
+      <workItem from="1676622792490" duration="16738000" />
     </task>
     <servers />
   </component>
